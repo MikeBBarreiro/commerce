@@ -12,8 +12,8 @@ function Item(o){
   this.weight         = o.weight * 1;
   this.color          = o.color;
   this.quantity       = o.quantity * 1;
-  this.msrp           = o.msrp * 1;
-  this.percentOff     = o.percentOff * 1;
+  this.msrp           = parseFloat(o.msrp);
+  this.percentOff     = parseFloat(o.percentOff * 1);
 }
 
 Object.defineProperty(Item, 'collection', {
@@ -21,7 +21,7 @@ Object.defineProperty(Item, 'collection', {
 });
 
 Item.prototype.cost = function(){
-  return this.msrp - (this.msrp * (this.percentOff/100));
+  return parseFloat(this.msrp - (this.msrp * (this.percentOff/100)));
 };
 
 Item.prototype.save = function(cb){

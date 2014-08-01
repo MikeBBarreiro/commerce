@@ -13,13 +13,13 @@ html
         li: a(href='/faq') Faq
 
     form(method='post', action='/items')
-      input(name='name', type='text', placeholder='iPad', autofocus=true)
+      input(name='name', type='text', placeholder='Item', autofocus=true)
       input(name='dimensions[l]', type='number', placeholder='length')
       input(name='dimensions[w]', type='number', placeholder='width')
       input(name='dimensions[h]', type='number', placeholder='height')
       input(name='weight', type='number', placeholder='weight')
       input(name='color', type='color', placeholder='color')
       input(name='quantity', type='number', placeholder='quantity')
-      input(name='msrp', type='number', placeholder='msrp')
+      input(name='msrp', type='number', placeholder='MSRP')
       input(name='percentOff', type='number', placeholder='percentOff')
       button Add Item to Database
