@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  background-color: #E9FAFF;
+  margin: auto;
+}
+
+tr {
+  border: 2px solid black;
+}
+td {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: 350px;
+}

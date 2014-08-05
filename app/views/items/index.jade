@@ -12,17 +12,30 @@ html
         li: a(href='/about') About
         li: a(href='/faq') Faq
         li: a(href='/items/new') Add Items
-   
-   each item in items
-      ul
-        li= item.name
-        li= item.dimensions.l
-        li= item.dimensions.w
-        li= item.dimensions.h
-        li= item.weight
-        li= item.color
-        li= item.quantity
-        li= item.msrp
-        li= item.percentOff
-        li= item.cost()
+
+    table
+      th name
+      th Length
+      th width
+      th height
+      th weight
+      th color
+      th quantity
+      th MSRP
+      th percent off
+      th cost
+        each item in items
+          tr
+            td
+              ul
+                a(href='/items/#{item._id.toString()}')= item.name
+            td= item.dimensions.l
+            td= item.dimensions.w
+            td= item.dimensions.h
+            td= item.weight
+            td(style='background-color:#{item.color};')= item.color
+            td= item.quantity
+            td= item.msrp
+            td= item.percentOff
+            td= item.cost()
 
