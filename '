@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title eCommerce
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 eCommerce
+    nav
+      ul
+        li: a(href='/') Home
+        li: a(href='/about') About
+        li: a(href='/faq') Faq
+        li: a(href='/items/new') Add Items
+
+    table
+      th name
+      th dimensions Length
+      th dimensions width
+      th dimensions height
+      th weight
+      th color
+      th quantity
+      th MSRP
+      th percent off
+      th cost
+        each item in items
+          tr
+            td
+              ul
+                li= item.name
+            td
+              li= item.dimensions.l
+            td
+              li= item.dimensions.w
+            td
+              li= item.dimensions.h
+            td
+              li= item.weight
+            td(style='background-color:#{item.color};')
+              li= item.color
+            td
+              li= item.quantity
+            td
+              li= item.msrp
+            td
+              li= item.percentOff
+            td
+                li= item.cost()
+
